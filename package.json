@@ -1,0 +1,23 @@
+{
+  "name": "typechain",
+  "version": "1.0.0",
+  "description": "Learning Typescript by making a Blockchain with it",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \" node dist/index.js\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giseokkang/typechain.git"
+  },
+  "author": "Giseok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giseokkang/typechain/issues"
+  },
+  "homepage": "https://github.com/Giseokkang/typechain#readme",
+  "dependencies": {
+    "tsc-watch": "^2.2.1",
+    "typescript": "^3.5.3"
+  }
+}
