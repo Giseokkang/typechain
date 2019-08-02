@@ -1,19 +1,27 @@
-class Humman {
-  public name: string;
-  public age: number;
-  public gender: string;
-  constructor(name: string, age: number, gender?: string) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
+  constructor(
+    index: number,
+    hash: string,
+    previousHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previousHash;
+    this.data = data;
+    this.timestamp = timestamp;
   }
 }
 
-const key = new Humman("key", 123, "male");
+const genesisBlock: Block = new Block(0, "202020202020", "", "hello", 123456);
+let blockchain: [Block] = [genesisBlock];
 
-const sayHello = (key): string =>
-  `hello ${key.name}, you are ${key.age}, and a ${key.gender}`;
-
-console.log(sayHello(key));
+console.log(blockchain);
 
 export {};
