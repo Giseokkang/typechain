@@ -1,18 +1,19 @@
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
+class Humman {
+  public name: string;
+  public age: number;
+  public gender: string;
+  constructor(name: string, age: number, gender?: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 }
 
-const person = {
-  name: "key",
-  age: 20,
-  gender: "male"
-};
+const key = new Humman("key", 123, "male");
 
-const sayHello = (person: Human): string =>
-  `hello ${person.name}, you are ${person.age}, and a ${person.gender}`;
+const sayHello = (key): string =>
+  `hello ${key.name}, you are ${key.age}, and a ${key.gender}`;
 
-console.log(sayHello(person));
+console.log(sayHello(key));
 
 export {};
